@@ -66,3 +66,4 @@ def generate():
         return send_file(buf, mimetype='image/png')
     except Exception as e:
         return f"Failed to generate: {e}"
+
