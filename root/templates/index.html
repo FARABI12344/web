@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fake Message Generator</title>
+</head>
+<body>
+  <h2>Generate Fake Message</h2>
+  <form action="/generate" method="post">
+    <label>User ID:</label><br>
+    <input type="text" name="user_id" required><br><br>
+
+    <label>Message:</label><br>
+    <textarea name="message" rows="4" cols="50" required></textarea><br><br>
+
+    <label>Background Color:</label><br>
+    <select name="color">
+      <option value="FBFBFB">White</option>
+      <option value="323339">Ash</option>
+      <option value="1A1A1E" selected>Dark</option>
+      <option value="0C0C0E">Onyx</option>
+    </select><br><br>
+
+    <button type="submit">Generate</button>
+  </form>
+</body>
+</html>
