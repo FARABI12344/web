@@ -43,7 +43,7 @@ async def generate_fake_msg(username, avatar_url, message, bg_color=(26,26,30), 
             avatar_bytes = await resp.read()
 
     orig = Image.open(io.BytesIO(avatar_bytes)).convert("RGB")
-    avatar = ImageOps.fit(orig, (avatar_size, avatar_size), centering=(0.5,0.5), resample=Image.LANCZOS).convert("RGBA")
+    avatar = ImageOps.fit(orig, (avatar_size, avatar_size), method=Image.LANCZOS, centering=(0.5,0.5)).convert("RGBA")
 
     mask = Image.new("L", (avatar_size*3, avatar_size*3), 0)
     mdraw = ImageDraw.Draw(mask)
